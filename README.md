@@ -1,3 +1,267 @@
-# my-summer-site2
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>청소요정</title>
+    <!-- 수정된 부트스트랩 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      /* 드롭다운 메뉴를 마우스 오버 시 표시하기 위한 CSS */
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+        /* 메뉴가 바로 아래에 붙도록 상단 마진을 제거합니다. */
+        margin-top: 0;
+      }
+      /* 드롭다운 버튼을 클릭한 후에도 메뉴가 계속 열려있는 것을 방지합니다. */
+      .dropdown > .dropdown-toggle:active {
+        pointer-events: none;
+      }
+      .container-fluid{
+        background-color: #2e8b57; /* 녹색 계열로 변경 */
+        font-size: large;
+      }
+      .nav-link{
+        color:white;
+        font-size: large;
+      }
+      .container1 {
+        background-image: url(container1.jpg);
+        background-size: cover; /* 이미지가 컨테이너를 가득 채우도록 설정 */
+        background-position: center; /* 이미지를 중앙에 배치 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 세로 중앙 정렬 */
+        align-items: center; /* 가로 중앙 정렬 */
+        height: 500px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000; /* 텍스트에 그림자 효과 */
+    }
 
-#안녕
+    .container1 h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    .container1 p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .container2 {
+        height: 500px;
+        text-align: center;
+        padding: 50px 20px; /* 위아래 패딩 추가 */
+    }
+    
+    .container2 h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .container2 form {
+        display: inline-block; /* 폼 자체를 중앙 정렬 */
+        text-align: left; /* 폼 안의 텍스트는 왼쪽 정렬 */
+    }
+
+    .container2 input,
+    .container2 select {
+        margin-bottom: 15px; /* 폼 요소 사이 간격 */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+      
+      
+      
+      
+      
+      .footer {
+        background-color: #333; /* 어두운 배경색 */
+        color: #ddd; /* 밝은 글자색 */
+        font-size: small;
+        padding: 30px 50px;
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    .footer p {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer div {
+        margin-bottom: 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="청소요정.html"><img src="icon.PNG" height="70px" width="180px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- me-auto를 ms-auto로 변경하여 내비게이션 메뉴를 오른쪽으로 정렬합니다. -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <!-- 드롭다운 메뉴 1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                소개
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">청소요정의history</a></li>
+                <li><a class="dropdown-item" href="#">찾아오시는 길</a></li>
+                <li><a class="dropdown-item" href="#">이용시간</a></li>
+              </ul>
+            </li>
+            <!-- 드롭다운 메뉴 2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                청소요금
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">청소요금</a></li>
+              </ul>
+            </li>
+            <!-- 드롭다운 메뉴 3 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                청소 서비스 소개
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">가정집청소</a></li>
+                <li><a class="dropdown-item" href="#">사무실청소</a></li>
+                <li><a class="dropdown-item" href="#">특수청소</a></li>
+              </ul>
+            </li>
+            <!-- 드롭다운 메뉴 4 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                QnA
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">문의</a></li>
+                <li><a class="dropdown-item" href="#">이용후기</a></li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li> -->
+          </ul>
+          <form class="d-flex" role="search" action="누누">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    </header>
+
+
+
+
+    <div class="content">
+        <div class="container1">
+            <div>
+                <h1>청소요정이란?</h1>
+                <p>
+                    귀찮은 청소 언제까지 해야 할까요?<br>
+                    이제 저희가 대신 해 드립니다!
+                </p>
+            </div>
+        </div>
+        <div class="container2">
+            <h1>무료견적받기</h1>
+            <form action="asd" method="post">
+                <div class="mb-3">
+                    <input type="radio" name="clean" value="이사/입주청소" id="clean1">
+                    <label for="clean1" class="me-3">이사/입주청소</label>
+                    <input type="radio" name="clean" value="사무실청소" id="clean2">
+                    <label for="clean2" class="me-3">사무실청소</label>
+                    <input type="radio" name="clean" value="특수청소" id="clean3">
+                    <label for="clean3">특수청소</label>
+                </div>
+                <div class="mb-3">
+                    <label for="address-select-province" class="form-label">청소하실 곳 주소:</label>
+                    <!-- 첫 번째 셀렉트 박스 -->
+                    <select id="address-select-province" class="form-select d-inline-block w-auto">
+                        <option value="서울" name="asd">서울특별시</option>
+                        <option value="경기">경기도</option>
+                        <option value="인천">인천 광역시</option>
+                        <option value="부산">부산광역시</option>
+                        <option value="대전">대전광역시</option>
+                        <option value="광주">광주광역시</option>
+                    </select>
+
+                    <!-- 두 번째 셀렉트 박스: 자바스크립트로 내용이 변경됩니다. -->
+                    <select id="address-select-city" class="form-select d-inline-block w-auto">
+                        <option>시/군/구 선택</option>
+                    </select>
+                    <input type="text" name="adress" placeholder="상세 주소를 입력하세요" class="form-control d-inline-block w-auto mt-2 mt-md-0">
+                </div>
+                <input type="submit" value="제출" class="btn btn-primary mt-3">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+      <div class="container-fluid footer">
+        <p><strong>청소매니아</strong></p>
+        <div>서울특별시 동대문구 천호대로69길 30, 201호(답십리) 김종석 청소매니아 107-31-71509</div>
+        <div>대전광역시 중구 태평로 80, 2동 48호(태평동) 임미크린 구임국 666-01-02649</div>
+        <div>광주광역시 북구 방실로191번길 10 (두암동) 대명크린 박성식 410-99-86776</div>
+        <div>부산광역시 사상구 사상로309번길 24 (덕포동) 클린매니저 김주완 814-14-01797</div>
+      </div>
+    </footer>
+
+    <!-- 부트스트랩 5.3.3 자바스크립트 번들 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      // 주소 선택에 따라 두 번째 드롭다운 메뉴의 옵션을 변경하는 자바스크립트
+      document.addEventListener('DOMContentLoaded', function() {
+          // 시/도를 선택하는 select 요소와 시/군/구를 선택하는 select 요소를 가져옵니다.
+          const provinceSelect = document.getElementById('address-select-province');
+          const citySelect = document.getElementById('address-select-city');
+
+          // 각 시/도에 해당하는 시/군/구 목록을 객체로 정의합니다.
+          const cityOptions = {
+              '서울': ['강남구', '강동구', '강북구', '강서구', '관악구', '광진구', '구로구', '금천구', '노원구', '도봉구', '동대문구', '동작구', '마포구', '서대문구', '서초구', '성동구', '성북구', '송파구', '양천구', '영등포구', '용산구', '은평구', '종로구', '중구', '중랑구'],
+              '인천': ['강화군', '계양구', '미추홀구', '남동구', '동구', '부평구', '서구', '연수구', '옹진군', '중구'],
+              '경기': ['수원시', '고양시', '용인시', '성남시', '부천시', '화성시', '안산시', '안양시', '평택시', '의정부시'],
+              '부산': ['강서구', '금정구', '기장군', '남구', '동구', '동래구', '부산진구', '북구', '사상구', '사하구', '서구', '수영구', '연제구', '영도구', '중구', '해운대구'],
+              '대전': ['대덕구', '동구', '서구', '유성구', '중구'],
+              '광주': ['광산구', '남구', '동구', '북구', '서구'],
+          };
+
+          // 첫 번째 select 요소의 변경 이벤트를 감지합니다.
+          provinceSelect.addEventListener('change', function() {
+              const selectedProvince = provinceSelect.value;
+              let cityHtml = '<option>시/군/구 선택</option>';
+
+              // 선택된 시/도에 따라 시/군/구 목록을 생성합니다.
+              if (cityOptions[selectedProvince]) {
+                  cityOptions[selectedProvince].forEach(city => {
+                      cityHtml += `<option value="${city}">${city}</option>`;
+                  });
+              }
+
+              // 두 번째 select 요소의 내용을 변경합니다.
+              citySelect.innerHTML = cityHtml;
+          });
+      });
+    </script>
+    
+  </body>
+</html>
